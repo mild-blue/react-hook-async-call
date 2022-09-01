@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useCallback, useMemo, useState } from "react";
 
 export const useAsyncCall = <T>(

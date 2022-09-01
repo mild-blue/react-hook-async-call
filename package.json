@@ -11,7 +11,7 @@
     "prettier-check": "prettier --check './**/*.{js,jsx,ts,tsx,css,md,json}'",
     "lint-fix": "eslint -c .eslintrc.json --fix --max-warnings=0 src",
     "lint-check": "eslint -c .eslintrc.json --max-warnings=0 src",
-    "prepare": "npm run lint-check && npm run build",
+    "prepare": "npm run build",
     "preversion": "npm run lint-check",
     "version": "npm run prettier-check && git add -A src",
     "postversion": "git push && git push --tags"

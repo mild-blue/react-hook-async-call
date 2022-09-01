@@ -39,3 +39,6 @@ jobs:
 
       - name: Run lint check
         run: npm run lint-check
+
+      - name: Run build check
+        run: npm run build

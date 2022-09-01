@@ -1,15 +1,23 @@
 {
-  "name": "react-useasynccall",
+  "name": "react-hook-async-call",
   "version": "1.0.0",
   "description": "Our amazing useAsyncCall hook for React.js",
   "main": "/lib/index.js",
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier-format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}'",
     "prettier-check": "prettier --check './**/*.{js,jsx,ts,tsx,css,md,json}'",
     "lint-fix": "eslint -c .eslintrc.json --fix --max-warnings=0 src",
-    "lint-check": "eslint -c .eslintrc.json --max-warnings=0 src"
+    "lint-check": "eslint -c .eslintrc.json --max-warnings=0 src",
+    "prepare": "npm run lint-check && npm run build",
+    "preversion": "npm run lint-check",
+    "version": "npm run prettier-check && git add -A src",
+    "postversion": "git push && git push --tags"
   },
+  "files": [
+    "lib/**/*"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mild-blue/react-useAsyncCall.git"

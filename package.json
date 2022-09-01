@@ -1,0 +1,49 @@
+{
+  "name": "react-hook-async-call",
+  "version": "1.0.2",
+  "description": "Our amazing useAsyncCall hook for React.js",
+  "main": "/lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier-format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}'",
+    "prettier-check": "prettier --check './**/*.{js,jsx,ts,tsx,css,md,json}'",
+    "lint-fix": "eslint -c .eslintrc.json --fix --max-warnings=0 src",
+    "lint-check": "eslint -c .eslintrc.json --max-warnings=0 src",
+    "prepare": "npm run build",
+    "preversion": "npm run lint-check",
+    "version": "npm run prettier-check && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mild-blue/react-useAsyncCall.git"
+  },
+  "keywords": [
+    "async",
+    "react",
+    "mildblue"
+  ],
+  "author": "Mild Blue s.r.o. <info@mild.blue>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mild-blue/react-useAsyncCall/issues"
+  },
+  "homepage": "https://github.com/mild-blue/react-useAsyncCall#readme",
+  "dependencies": {
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.18",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react": "^7.31.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.2"
+  }
+}

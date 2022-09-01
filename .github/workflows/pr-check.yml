@@ -1,0 +1,41 @@
+name: Check Pipeline
+
+on:
+  # manual dispatch
+  workflow_dispatch:
+  # run on PRs to master when - is opened,
+  # new commit is pushed or is set as ready for review
+  pull_request:
+    types: [ opened, synchronize, ready_for_review ]
+    branches:
+      - master
+      - release
+
+# Cancel workflow when new pushes are made
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    # disable run if the PR is draft (as our CLI creates PR as draft once the issue is in progress)
+    if: github.event.pull_request.draft == false
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup node env 🏗
+        uses: actions/setup-node@v2.1.5
+        with:
+          node-version: ${{ matrix.node }}
+          check-latest: true
+
+      - name: Install dependencies 👨🏻‍💻
+        run: npm i
+
+      - name: Run prettier check
+        run: npm run prettier-check
+
+      - name: Run lint check
+        run: npm run lint-check

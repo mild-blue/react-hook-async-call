@@ -1,8 +1,9 @@
 {
   "name": "react-hook-async-call",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Our amazing useAsyncCall hook for React.js",
   "main": "/lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",

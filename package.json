@@ -2,7 +2,7 @@
   "name": "react-useasynccall",
   "version": "1.0.0",
   "description": "Our amazing useAsyncCall hook for React.js",
-  "main": "/src/index.ts",
+  "main": "/lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

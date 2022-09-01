@@ -1,6 +1,6 @@
 {
   "name": "react-hook-async-call",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Our amazing useAsyncCall hook for React.js",
   "main": "/lib/index.js",
   "scripts": {

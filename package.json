@@ -1,0 +1,24 @@
+{
+  "name": "react-useasynccall",
+  "version": "1.0.0",
+  "description": "Our amazing useAsyncCall hook for React.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mild-blue/react-useAsyncCall.git"
+  },
+  "keywords": [
+    "async",
+    "react",
+    "mildblue"
+  ],
+  "author": "Mild Blue s.r.o. <info@mild.blue>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mild-blue/react-useAsyncCall/issues"
+  },
+  "homepage": "https://github.com/mild-blue/react-useAsyncCall#readme"
+}

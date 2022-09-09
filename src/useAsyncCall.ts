@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useCallback, useMemo, useState } from "react";
 
-type InitialState<S> = S extends Array<any> ? [] : undefined;
+type InitialState<S> = S extends Array<any> ? [] : undefined | "";
 
 export const useAsyncCall = <P extends any[], S, I extends InitialState<S>>(
   apiCall: (...argArray: P) => Promise<S>,
